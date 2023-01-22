@@ -1,0 +1,114 @@
+[
+  {
+    "model": "food_api.topping",
+    "pk": 1,
+    "fields": {
+      "name": "Cheese",
+      "created": "2023-01-01T00:00:00",
+      "modified": "2023-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "food_api.topping",
+    "pk": 2,
+    "fields": {
+      "name": "Tomato",
+      "created": "2023-01-01T00:00:00",
+      "modified": "2023-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "food_api.topping",
+    "pk": 3,
+    "fields": {
+      "name": "Lettuce",
+      "created": "2023-01-01T00:00:00",
+      "modified": "2023-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "food_api.topping",
+    "pk": 4,
+    "fields": {
+      "name": "Onion",
+      "created": "2023-01-01T00:00:00",
+      "modified": "2023-01-01T00:00:00"
+    }
+  },
+  {
+    "model": "food_api.topping",
+    "pk": 5,
+    "fields": {
+      "name": "Pickles",
+      "created": "2023-01-01T00:00:00",
+      "modified": "2023-01-01T00:00:00"
+    }
+  },
+  
+  {
+        "model": "food_api.foodcategory",
+        "pk": 1,
+        "fields": {
+            "name": "Main dishes",
+            "is_publish": true,
+            "created": "2023-01-01T00:00:00",
+            "modified": "2023-01-01T00:00:00"
+        }
+    },
+    {
+        "model": "food_api.foodcategory",
+        "pk": 2,
+        "fields": {
+            "name": "Desserts",
+            "is_publish": true,
+            "created": "2023-01-01T00:00:00",
+            "modified": "2023-01-01T00:00:00"
+        }
+    },
+  {
+        "model": "food_api.food",
+        "pk": 1,
+        "fields": {
+            "name": "Pizza",
+            "category": 1,
+            "description": "Delicious pizza with cheese and tomato toppings",
+            "price": 10,
+            "is_special": true,
+            "is_vegan": false,
+            "toppings": [1, 2],
+            "created": "2023-01-01T00:00:00",
+            "modified": "2023-01-01T00:00:00"
+        }
+    },
+    {
+        "model": "food_api.food",
+        "pk": 2,
+        "fields": {
+            "name": "Salad",
+            "category": 1,
+            "description": "Fresh mixed greens with tomato and cheese toppings",
+            "price": 5,
+            "is_special": false,
+            "is_vegan": true,
+            "toppings": [2],
+            "created": "2023-01-01T00:00:00",
+            "modified": "2023-01-01T00:00:00"
+        }
+    },
+    {
+    "model": "food_api.food",
+    "pk": 3,
+    "fields": {
+        "name": "Chicken fillet",
+        "category": 1,
+        "description": "Fresh chicken fillet with vegetables",
+        "price": 18,
+        "is_special": false,
+        "is_vegan": false,
+        "toppings": [4, 5],
+        "created": "2023-01-01T00:00:00",
+        "modified": "2023-01-01T00:00:00"
+    }
+  }
+  
+]
