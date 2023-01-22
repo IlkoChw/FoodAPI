@@ -99,4 +99,7 @@ INSTALLED_APPS += [
 ALLOWED_HOSTS = ['*']
 
 
+API_HEADER = os.environ.get("API_HEADER", "X-API-Key")
+API_TOKEN = os.environ.get("API_TOKEN", "super_secret")
+
 
