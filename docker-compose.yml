@@ -1,0 +1,30 @@
+version: '3.4'
+
+volumes:
+    pgdata:
+        driver: local
+
+services:
+    postgres:
+        restart: always
+        image: postgres:15.0-alpine
+        volumes:
+            - ./datapg:/var/lib/postgresql/data
+        environment:
+            - POSTGRES_DB=${POSTGRES_DB}
+            - POSTGRES_USER=${POSTGRES_USER}
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    web:
+        restart: always
+        image: food_api
+        volumes:
+            - ./app:/app
+        ports:
+            - 8000:8000
+        command: >
+            bash -c "python manage.py migrate --noinput || exit 1
+            && python manage.py runserver 0.0.0.0:8000"
+        env_file:
+            - .env
+        depends_on:
+            - postgres
