@@ -19,6 +19,7 @@ header_key = ApiKey()
 
 api = NinjaAPI(
     title=f"{settings.APP_NAME} API",
+    # auth=header_key,
 )
 
 

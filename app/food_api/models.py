@@ -33,6 +33,9 @@ class FoodCategory(BaseModel, PubModel):
         verbose_name = "Категория блюд"
         verbose_name_plural = "Категории блюд"
 
+    def get_filtered_foods(self, ids: list[int]):
+        return self.foods.filter(id__in=ids)
+
 
 class Food(BaseModel, PubModel):
     category = models.ForeignKey(FoodCategory, on_delete=models.CASCADE, related_name='foods', verbose_name='Категория')
