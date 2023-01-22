@@ -92,6 +92,7 @@ APP_NAME = 'Food API'
 DEBUG = os.getenv("DEBUG", 'False').lower() in ['true', '1']
 
 INSTALLED_APPS += [
+    'food_api',
     ]
 
 
